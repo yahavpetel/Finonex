@@ -2,14 +2,16 @@ const fs = require('fs');
 const axios = require('axios');
 
 const CLIENT_EVENTS_FILE = 'events.jsonl';
+const SERVER_ADDRESS = 'http://localhost:8000';
+const SECRET_KEY = 'secret';
 
 async function sendEventToServer(event) {
     try {
         const options = {
             method: 'POST',
-            url: 'http://localhost:8000/liveEvent',
+            url: `${SERVER_ADDRESS}/liveEvent`,
             headers: {
-                'Authorization': 'secret'
+                'Authorization': SECRET_KEY
             },
             data: event
         };

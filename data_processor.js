@@ -2,6 +2,9 @@ const fs = require('fs');
 const readline = require('readline');
 const { Client } = require('pg');
 
+// Note: I think it's better to put all the configurations in a config file
+// but task said to contain only these specific files so I didn't.
+
 // db configuration
 const DB_HOST = 'localhost';
 const DB_NAME = 'finonex';
